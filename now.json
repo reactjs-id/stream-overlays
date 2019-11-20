@@ -1,5 +1,6 @@
 {
   "name": "stream-overlays",
+  "alias": "reactjs-id-stream-overlays.now.sh",
   "version": 2,
   "builds": [{ "src": "next.config.js", "use": "@now/next" }]
 }
