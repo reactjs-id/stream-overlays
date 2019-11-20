@@ -1,6 +1,5 @@
 {
-  "name": "nextjs-typescript-quickstart",
-  "alias": "nextjs-typescript-quickstart.now.sh",
+  "name": "stream-overlays",
   "version": 2,
   "builds": [{ "src": "next.config.js", "use": "@now/next" }]
 }
