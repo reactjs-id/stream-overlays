@@ -1,22 +1,21 @@
 import * as React from 'react'
-import { NextPage } from 'next'
 
-import Layout from '../components/Layout'
-import OverlayContent from '../components/OverlayContent'
-import OnScreenGraphic from '../components/OnScreenGraphic'
+import { format } from 'date-fns'
 
-const LiveScreen: NextPage = () => {
+import useClock from '../utils/useClock'
+import Logo from './Logo'
+
+const OnScreenGraphic: React.FC = () => {
+  const time = useClock()
+
   return (
-    <Layout>
-      <OverlayContent noPadding>
-        <OnScreenGraphic />
-      </OverlayContent>
+    <section>
+      <div className="block left">
+        <Logo height={48} fill="#fff" />
+      </div>
+      <div className="block right">{format(time, 'HH:mm:ss')}</div>
       <style jsx>{`
-        .title {
-          margin-top: 0;
-        }
-
-        .inner {
+        section {
           display: flex;
           flex-direction: row;
           align-items: center;
@@ -44,8 +43,8 @@ const LiveScreen: NextPage = () => {
           padding-right: 96px;
         }
       `}</style>
-    </Layout>
+    </section>
   )
 }
 
-export default LiveScreen
+export default OnScreenGraphic

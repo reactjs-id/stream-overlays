@@ -3,6 +3,7 @@ import { NextPage } from 'next'
 
 import Layout from '../components/Layout'
 import Logo from '../components/Logo'
+import OnScreenGraphic from '../components/OnScreenGraphic'
 
 const PreStreamScreen: NextPage = () => (
   <Layout>
@@ -13,6 +14,7 @@ const PreStreamScreen: NextPage = () => (
         <p className="subtitle">Komunitas Pengembang ReactJS Indonesia</p>
       </div>
       <div className="footer">reactjs.id</div>
+      <OnScreenGraphic />
     </main>
     <style jsx>{`
       .content {
